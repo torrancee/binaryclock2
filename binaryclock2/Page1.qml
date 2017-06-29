@@ -12,56 +12,34 @@ Page1Form {
 
             var myDate = new Date()
             var seconds =  reverseString(myDate.getSeconds().toString(2))
+            var minutes =  reverseString(myDate.getMinutes().toString(2))
+            var hours =  reverseString(myDate.getHours().toString(2))
             console.log(seconds)
 
-            if(seconds[0] == 1){
-                statusIndicator17.active = true
-            }
-            else{
-                statusIndicator17.active = false
-            }
-
-            if(seconds[1] == 1){
-                statusIndicator16.active = true
-            }
-            else{
-                statusIndicator16.active = false
-            }
-
-            if(seconds[2] == 1){
-                statusIndicator15.active = true
-            }
-            else{
-                statusIndicator15.active = false
-            }
-
-            if(seconds[3] == 1){
-                statusIndicator14.active = true
-            }
-            else{
-                statusIndicator14.active = false
-            }
-
-            if(seconds[4] == 1){
-                statusIndicator13.active = true
-            }
-            else{
-                statusIndicator13.active = false
-            }
-
-            if(seconds[5] == 1){
-                statusIndicator12.active = true
-            }
-            else{
-                statusIndicator12.active = false
-            }
-
-
+            setTime(row, seconds)
+            setTime(row1, minutes)
+            setTime(row3, hours)
         }
     }
 
    function reverseString(str) {
-   return str.split( '' ).reverse( ).join( '' )
+        return str.split( '' ).reverse( ).join( '' )
+   }
+
+   function setTime(element, currentTime){
+
+       var j = 0
+       var i = 5
+
+       for(; i >= 0; i--, j++){
+
+           if(currentTime[j] == 1){
+               element.children[i].active = true
+           }
+           else{
+               element.children[i].active = false
+           }
+       }
    }
 
 }

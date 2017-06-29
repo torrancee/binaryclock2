@@ -7,6 +7,7 @@ import QtQuick.Extras 1.4
 Item {
     width: 300
     height: 300
+    property alias row3: row3
     property alias statusIndicator4: statusIndicator4
     property alias statusIndicator3: statusIndicator3
     property alias statusIndicator2: statusIndicator2
@@ -36,6 +37,7 @@ Item {
         columns: 1
 
         Row {
+            id: row3
             Layout.preferredHeight: 26
             Layout.preferredWidth: 158
 
