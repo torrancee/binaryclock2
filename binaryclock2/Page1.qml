@@ -14,8 +14,10 @@ Page1Form {
             var seconds =  reverseString(myDate.getSeconds().toString(2))
             var minutes =  reverseString(myDate.getMinutes().toString(2))
             var hours =  reverseString(myDate.getHours().toString(2))
-            console.log(seconds)
+//            var fullTime
+//            myDate.toLocaleTimeString(fullTime, "hh:mm:ss")
 
+//            text4.text = fullTime
             setTime(row, seconds)
             setTime(row1, minutes)
             setTime(row3, hours)

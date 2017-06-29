@@ -6,7 +6,8 @@ import QtQuick.Extras 1.4
 
 Item {
     width: 300
-    height: 300
+    height: 220
+    property alias text4: text4
     property alias row3: row3
     property alias statusIndicator4: statusIndicator4
     property alias statusIndicator3: statusIndicator3
@@ -65,6 +66,12 @@ Item {
             StatusIndicator {
                 id: statusIndicator5
             }
+
+            Text {
+                id: text1
+                text: qsTr("HOURS")
+                font.pixelSize: 12
+            }
         }
 
         Row {
@@ -94,6 +101,12 @@ Item {
 
             StatusIndicator {
                 id: statusIndicator11
+            }
+
+            Text {
+                id: text2
+                text: qsTr("MINUTES")
+                font.pixelSize: 12
             }
         }
 
@@ -125,6 +138,25 @@ Item {
             StatusIndicator {
                 id: statusIndicator17
             }
+
+            Text {
+                id: text3
+                text: qsTr("SECONDS")
+                font.pixelSize: 12
+            }
         }
+    }
+
+    Text {
+        id: text4
+        x: 65
+        y: 40
+        width: 164
+        height: 46
+        color: "#9aa7d8"
+        text: qsTr("Text")
+        horizontalAlignment: Text.AlignHCenter
+        font.capitalization: Font.AllUppercase
+        font.pixelSize: 22
     }
 }
