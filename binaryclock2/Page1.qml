@@ -7,6 +7,7 @@ Page1Form {
         interval: 1000
         running: true
         repeat: true
+        triggeredOnStart: true
 
         onTriggered: {
 
@@ -14,10 +15,9 @@ Page1Form {
             var seconds =  reverseString(myDate.getSeconds().toString(2))
             var minutes =  reverseString(myDate.getMinutes().toString(2))
             var hours =  reverseString(myDate.getHours().toString(2))
-//            var fullTime
-//            myDate.toLocaleTimeString(fullTime, "hh:mm:ss")
+            var fullTime = addZero(myDate.getHours()) + ":" + addZero(myDate.getMinutes()) + ":" + addZero(myDate.getSeconds());
 
-//            text4.text = fullTime
+            text4.text = fullTime
             setTime(row, seconds)
             setTime(row1, minutes)
             setTime(row3, hours)
@@ -42,6 +42,13 @@ Page1Form {
                element.children[i].active = false
            }
        }
+   }
+
+   function addZero(i) {
+       if (i < 10) {
+           i = "0" + i;
+       }
+       return i;
    }
 
 }

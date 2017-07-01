@@ -157,6 +157,6 @@ Item {
         text: qsTr("Text")
         horizontalAlignment: Text.AlignHCenter
         font.capitalization: Font.AllUppercase
-        font.pixelSize: 22
+        font.pixelSize: 37
     }
 }
